@@ -1,8 +1,11 @@
 # asma_karimah-1801624381-drp
 # asma_karimah-1801624381-drp
-Nama: Asma Karimah
+Ketua
+Nama: Asma Karimah 
 NIM: 1801624381
+Anggota Kedua
 Nama: Rizqia Roisalya
 NIM: 1801624158
-Nama: Sarah Nayla Putri
+Anggota Pertama
+Nama: Sarah Nayla Putri 
 NIM: 1801624295 
