@@ -1,16 +1,18 @@
 import sqlite3
 
-conn = sqlite3.connect('breathing.db')
-cursor = conn.cursor()
+def init_db():
+    conn = sqlite3.connect("breathing.db")
+    cursor = conn.cursor()
 
-cursor.execute('''
+    cursor.execute("""
     CREATE TABLE IF NOT EXISTS riwayat (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        mood TEXT,
         teknik TEXT,
-        siklus INTEGER,
-        durasi INTEGER
+        pattern TEXT,
+        waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
-''')
+    """)
 
-conn.commit()
-conn.close()
+    conn.commit()
+    conn.close()

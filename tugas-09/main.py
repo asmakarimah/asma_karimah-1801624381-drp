@@ -1,9 +1,9 @@
-from tools import display_menu, select_menu
+from tools import menu
+from manager import init_db
 
-if __name__ == '__main__':
-    while True:
-        display_menu()
-        menu = input('Pilih menu (1-4): ')
-        is_done = select_menu(menu=menu)
-        if is_done:
-            break
+def main():
+    init_db()
+    menu()
+
+if __name__ == "__main__":
+    main()

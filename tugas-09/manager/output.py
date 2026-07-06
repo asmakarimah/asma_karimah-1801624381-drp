@@ -1,14 +1,15 @@
 import sqlite3
 
-def simpan_riwayat(teknik, siklus, durasi_total):
-    """Fungsi CREATE: Menyimpan data ke database SQL"""
-    conn = sqlite3.connect('breathing.db')
+DB = "breathing.db"
+
+def simpan_riwayat(mood, teknik, pattern):
+    conn = sqlite3.connect(DB)
     cursor = conn.cursor()
-    
-    cursor.execute('''
-        INSERT INTO riwayat (teknik, siklus, durasi)
+
+    cursor.execute("""
+        INSERT INTO riwayat (mood, teknik, pattern)
         VALUES (?, ?, ?)
-    ''', (teknik, siklus, durasi_total))
-    
+    """, (mood, teknik, pattern))
+
     conn.commit()
     conn.close()
