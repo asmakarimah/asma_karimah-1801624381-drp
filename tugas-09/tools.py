@@ -4,6 +4,7 @@ from manager.output import simpan_riwayat
 from manager.search import ambil_semua_riwayat
 from manager.export_json import export_json
 from manager.import_json import import_json
+from manager.statistic import hitung_statistik
 
 RULE = {
     "stres": {
@@ -79,13 +80,14 @@ def breathing_session(teknik, steps):
 def menu():
     while True:
         clear()
-        print("========== BREATHING APP ==========")
-        print("1. Mulai Breathing")
-        print("2. Lihat Riwayat")
-        print("3. Export JSON")
-        print("4. Import JSON")
+        print("======= ⏱️ TIME BREATHING APP 🫁 =======")
+        print("1. Mulai Breathing ▶️")
+        print("2. Lihat Riwayat 🧾")
+        print("3. Export JSON 📤")
+        print("4. Import JSON 📥")
+        print("5. Lihat Statistik Pekanan 📊")
         print("0. Keluar")
-        print("===================================")
+        print("======================================")
         
         pilihan = input("Pilih menu: ")
         
@@ -146,10 +148,16 @@ def menu():
             clear()
             import_json()
             input("\nTekan Enter untuk kembali...")
+
+        elif pilihan == "5":
+            clear()
+            hitung_statistik()
+            input("\nTekan Enter untuk kembali...")
             
         elif pilihan == "0":
             clear()
-            print("Terima kasih telah menggunakan Breathing App. Stay mindful! 👋")
+            print("Terima kasih telah menggunakan Time Breathing App⏱️ 🫁")
+            print("Stay mindful! 👋😏")
             break
         else:
             print("\n❌ Pilihan tidak tersedia.")
