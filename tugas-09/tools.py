@@ -2,6 +2,8 @@ import os
 import time
 from manager.output import simpan_riwayat
 from manager.search import ambil_semua_riwayat
+from manager.export_json import export_json
+from manager.import_json import import_json
 
 RULE = {
     "stres": {
@@ -80,6 +82,8 @@ def menu():
         print("========== BREATHING APP ==========")
         print("1. Mulai Breathing")
         print("2. Lihat Riwayat")
+        print("3. Export JSON")
+        print("4. Import JSON")
         print("0. Keluar")
         print("===================================")
         
@@ -132,6 +136,16 @@ def menu():
                 print("--------------------------------")
                 
             input("\nTekan Enter untuk kembali ke menu...")
+        
+        elif pilihan == "3":
+            clear()
+             export_json()
+            input("\nTekan Enter untuk kembali...")
+
+        elif pilihan == "4":
+            clear()
+            import_json()
+            input("\nTekan Enter untuk kembali...")
             
         elif pilihan == "0":
             clear()
