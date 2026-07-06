@@ -139,7 +139,7 @@ def menu():
         
         elif pilihan == "3":
             clear()
-             export_json()
+            export_json()
             input("\nTekan Enter untuk kembali...")
 
         elif pilihan == "4":
